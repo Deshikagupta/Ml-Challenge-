@@ -1,0 +1,8 @@
+# normalizer.py and blocking.py's core (Blocks A/B/C/E) need nothing beyond the
+# standard library. scikit-learn is required for:
+#   - blocking.py Block D (TF-IDF character n-gram retrieval)
+#   - matching_model.py (HistGradientBoostingClassifier / LogisticRegression)
+# numpy is a transitive scikit-learn dependency, pinned explicitly since
+# matching_model.py and prediction.py import it directly for feature matrices.
+scikit-learn==1.8.0
+numpy==2.4.4
